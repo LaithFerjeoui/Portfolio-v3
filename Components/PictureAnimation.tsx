@@ -1,19 +1,27 @@
-import { motion } from 'framer-motion'
-import React from 'react'
+import { motion, Variants } from 'framer-motion';
+import React from 'react';
+import img from "../public/image.jpg"
+import Image from 'next/image';
 
-const PictureAnimation = () => {
-  return (
-    <div><motion.div
-    initial="hidden"
-    whileInView="show"
-    variants={fadeIn("right", "tween", 0.2, 1)}
-    className="box"
-  >
-    <div className="content">
-      <img src="./images/about.jpg" alt="Laith's Picture" />
-    </div>
-  </motion.div></div>
-  )
-}
+const PictureAnimation: React.FC = () => {
+    return (
+        <div className='w-full flex justify-center my-20'>
+            <div
+                className="box "
+            >
+                <div className="content">
+                    <Image
+                        src={img}
+                        alt="Description of the image"
+                        width={500} // Width of the image
+                        height={300} // Height of the image
+                    />
+                </div>
 
-export default PictureAnimation
+            </div>
+        </div>
+
+    );
+};
+
+export default PictureAnimation;

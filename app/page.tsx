@@ -1,6 +1,7 @@
 import { FloatingNav } from "@/Components/Floating-navbar";
 import Grid from "@/Components/Grid";
 import Hero from "@/Components/Hero";
+import PictureAnimation from "@/Components/PictureAnimation";
 import { FaHome } from "react-icons/fa";
 const navItems = [
   {
@@ -26,9 +27,10 @@ export default function Home() {
     <main className="bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 dark ">
       <div className="max-w-7xl w-full ">
         <FloatingNav navItems={navItems}
-      />
+        />
         <Hero />
-        <Grid/>
+        <PictureAnimation />
+        <Grid />
       </div>
     </main>
   );
