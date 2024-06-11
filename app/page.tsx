@@ -2,6 +2,7 @@ import { FloatingNav } from "@/Components/Floating-navbar";
 import Grid from "@/Components/Grid";
 import Hero from "@/Components/Hero";
 import PictureAnimation from "@/Components/PictureAnimation";
+import RecentProjects from "@/Components/RecentProjects";
 import { FaHome } from "react-icons/fa";
 const navItems = [
   {
@@ -31,6 +32,7 @@ export default function Home() {
         <Hero />
         <PictureAnimation />
         <Grid />
+        <RecentProjects/>
       </div>
     </main>
   );
