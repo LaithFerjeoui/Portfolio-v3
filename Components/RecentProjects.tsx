@@ -20,19 +20,32 @@ const RecentProjects = () => {
                             title="/ui.aceternity.com"
                             href="https://twitter.com/mannupaaji"
                         >
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                <div
-                                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                                    style={{ backgroundColor: "#13162D" }}
-                                >
-                                    <img src="/bg.png" alt="bgimg" />
-                                </div>
-                                <img
-                                    src={item.img}
-                                    alt="cover"
-                                    className="z-10 absolute bottom-0"
-                                />
-                            </div>
+                            {
+                                item.id === 3 || item.id === 4 ? (
+                                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                                        <div
+                                            className="relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl"
+                                            
+                                        >
+                                            <img src={item.img} alt="bgimg"   className='' />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                                        <div
+                                            className="relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl"
+                                            style={{ backgroundColor: "#13162D" }}
+                                        >
+                                            <img src="/bg.png" alt="bgimg" />
+                                        </div>
+                                        <img
+                                            src={item.img}
+                                            alt="cover"
+                                            className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0"
+                                        />
+                                    </div>
+                                )
+                            }
 
                             <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                                 {item.title}
