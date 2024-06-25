@@ -77,7 +77,7 @@ export const projects = [
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://bankera.netlify.app",
-    git: ""
+    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel"
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ export const projects = [
     des: "Bankerise® is a Digital Banking Engagement Platform that helps Retail & Corporate Banks seamlessly join the Digital Bank 3.0 era.",
     img: "/p2.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/dock.svg"],
-    git: ""
+    git: "https://github.com/LaithFerjeoui/Bankerise-BackOffice-PROXYM"
   },
   {
     id: 3,
@@ -94,7 +94,7 @@ export const projects = [
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/node.svg", "/ex.svg", "/auth0.png"],
     videosrc: "/izanagi.mp4",
-    git: ""
+    git: "https://github.com/LaithFerjeoui/Full-Stack-Real-Estate-IZANAGI"
   },
   {
     id: 4,
@@ -103,7 +103,7 @@ export const projects = [
     img: "/p5.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "/izanagi.mp4",
-    git: ""
+    git: "https://github.com/LaithFerjeoui/e-boostacademy"
   },
   {
     id: 5,
@@ -111,7 +111,7 @@ export const projects = [
     des: "”One Percent” is an advanced e-commerce Fullstack platform built with Laravel and Filament. It ensures seamless UI-Database interaction and provides an organized admin dashboard for effortless management of products, orders, and users.",
     img: "/p4.png",
     iconLists: ["/lara.png"],
-    git: ""
+    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel"
 
   },
 ];

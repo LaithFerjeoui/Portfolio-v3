@@ -94,9 +94,11 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
 
                                             </div>
                                             <div className='flex justify-center items-center gap-4 my-4'>
-                                                <button className="shadow-[inset_0_0_0_2px_#616467]  px-10 py-1 sm:py-1.5 rounded-full tracking-widest uppercase font-medium bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200 text-sm">
-                                                    Github Repo
-                                                </button>
+                                                <a href={project?.git}>
+                                                    <button className="shadow-[inset_0_0_0_2px_#616467]  px-10 py-1 sm:py-1.5 rounded-full tracking-widest uppercase font-medium bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200 text-sm">
+                                                        Github Repo
+                                                    </button>
+                                                </a>
                                                 {
                                                     project?.link ? (<a href={project?.link}>
                                                         <Button
@@ -108,7 +110,7 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                                     </a>) : (
 
                                                         <Button
-                                                        
+
                                                             className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 "
                                                             onClick={() => toast.info("This Project is not Deployed yet.")}
                                                         >
