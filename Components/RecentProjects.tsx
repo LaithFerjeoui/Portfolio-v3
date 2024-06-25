@@ -1,63 +1,59 @@
+"use client"
 import { projects } from '@/data'
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
+import ProjectSlideOver from './ProjectSlideOver'
 
-const RecentProjects = () => {
+interface Icon {
+    src: string;
+}
+
+interface Project {
+    id: number;
+    title: string;
+    des: string;
+    img: string;
+    iconLists: Icon[];
+}
+
+const RecentProjects: React.FC = () => {
+    const [slider, setSlider] = useState<boolean>(false)
+    const [project, setProject] = useState<Project | null>(null)
+
+    const handleClick = useCallback((item: any) => {
+        setSlider(true);
+        setProject(item);
+    }, []);
     return (
-        <div className='py-20'>
-            <h1 className=' heading text-neutral-200'>
+        <div className='py-20' id='projects'>
+            <h1 className='heading text-neutral-200'>
                 A small Selection of my{' '}
-                <span className='text-purple'> Recent Projects</span>
+                <span className='text-purple'>Recent Projects</span>
             </h1>
-            <div className='flex flex-wrap items-center justify-center p-4  gap-16 mt-10 text-gray-100'>
+            <ProjectSlideOver open={slider} setOpen={setSlider} project={project} />
+            <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100'>
                 {projects.map((item) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
                         key={item.id}
+                        onClick={() => handleClick(item )}
                     >
-                        <PinContainer
-                            title="/ui.aceternity.com"
-                            href="https://twitter.com/mannupaaji"
-                        >
-                            {
-                                item.id === 3 || item.id === 4 ? (
-                                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                        <div
-                                            className="relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl"
-                                            
-                                        >
-                                            <img src={item.img} alt="bgimg"   className='' />
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                        <div
-                                            className="relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl"
-                                            style={{ backgroundColor: "#13162D" }}
-                                        >
-                                            <img src="/bg.png" alt="bgimg" />
-                                        </div>
-                                        <img
-                                            src={item.img}
-                                            alt="cover"
-                                            className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0"
-                                        />
-                                    </div>
-                                )
-                            }
+                        <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
+                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                                <div className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${item.id === 3 || item.id === 4 ? '' : 'bg-[#13162D]'}`}>
+                                    <img src={item.id === 3 || item.id === 4 ? item.img : '/bg.png'} alt="bgimg" />
+                                    {!(item.id === 3 || item.id === 4) && (
+                                        <img src={item.img} alt="cover" className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0" />
+                                    )}
+                                </div>
+                            </div>
 
                             <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                                 {item.title}
                             </h1>
 
-                            <p
-                                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                                style={{
-                                    color: "#BEC1DD",
-                                    margin: "1vh 0",
-                                }}
-                            >
+                            <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-[#BEC1DD] mt-2 mb-4">
                                 {item.des}
                             </p>
 
@@ -71,14 +67,14 @@ const RecentProjects = () => {
                                                 transform: `translateX(-${5 * index + 2}px)`,
                                             }}
                                         >
-                                            <img src={icon} alt="icon5" className="p-2" />
+                                            <img src={icon} alt="icon" className="p-2" />
                                         </div>
                                     ))}
                                 </div>
 
                                 <div className="flex justify-center items-center">
                                     <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                                        Check Live Site
+                                        View Details
                                     </p>
                                     <FaLocationArrow className="ms-3" color="#CBACF9" />
                                 </div>
@@ -91,4 +87,4 @@ const RecentProjects = () => {
     )
 }
 
-export default RecentProjects
+export default React.memo(RecentProjects)

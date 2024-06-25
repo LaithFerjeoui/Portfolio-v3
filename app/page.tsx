@@ -1,28 +1,15 @@
+import Certifications from "@/Components/Certifications";
 import { FloatingNav } from "@/Components/Floating-navbar";
+import Footer from "@/Components/Footer";
 import Grid from "@/Components/Grid";
 import Hero from "@/Components/Hero";
 import PictureAnimation from "@/Components/PictureAnimation";
 import RecentProjects from "@/Components/RecentProjects";
-import { FaHome } from "react-icons/fa";
-const navItems = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <FaHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  },
-  // {
-  //   name: "About",
-  //   link: "/about",
-  //   icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  // },
-  // {
-  //   name: "Contact",
-  //   link: "/contact",
-  //   icon: (
-  //     <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-  //   ),
-  // },
-];
+import { navItems } from "@/data";
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Home() {
   return (
     <main className="bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 dark ">
@@ -32,8 +19,22 @@ export default function Home() {
         <Hero />
         <PictureAnimation />
         <Grid />
-        <RecentProjects/>
+        <RecentProjects />
+        <Certifications />
+        <Footer />
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </main>
   );
 }

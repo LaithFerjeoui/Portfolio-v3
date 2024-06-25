@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.0",
+    "@heroicons/react": "^2.1.4",
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
+    "@sentry/nextjs": "^8.12.0",
     "@tabler/icons-react": "^3.5.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
     "i": "^0.3.7",
@@ -23,8 +27,10 @@
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-lottie": "^1.2.4",
+    "react-toastify": "^10.0.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-aspect-ratio": "^3.0.0",
     "three": "^0.165.0",
     "three-globe": "^2.31.0"
   },
