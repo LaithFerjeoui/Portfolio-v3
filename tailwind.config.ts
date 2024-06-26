@@ -9,7 +9,7 @@ const {
 
 module.exports = {
   darkMode: ["class"],
-  content: [
+  purge: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
@@ -189,7 +189,7 @@ module.exports = {
       );
     },
   ],
-} satisfies Config;
+} 
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
