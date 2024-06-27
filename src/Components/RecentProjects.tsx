@@ -1,5 +1,5 @@
 "use client"
-import { projects } from '@/data'
+import { projects } from '../data'
 import React, { useState, useCallback } from 'react'
 import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'

@@ -1,6 +1,6 @@
 import { motion, Variants } from 'framer-motion';
 import React from 'react';
-import img from "../public/image.jpg"
+import img from "../../public/image.jpg"
 import Image from 'next/image';
 
 const PictureAnimation: React.FC = () => {

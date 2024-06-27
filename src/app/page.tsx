@@ -1,11 +1,11 @@
-import Certifications from "@/Components/Certifications";
-import { FloatingNav } from "@/Components/Floating-navbar";
-import Footer from "@/Components/Footer";
-import Grid from "@/Components/Grid";
-import Hero from "@/Components/Hero";
-import PictureAnimation from "@/Components/PictureAnimation";
-import RecentProjects from "@/Components/RecentProjects";
-import { navItems } from "@/data";
+import Certifications from "../Components/Certifications";
+import { FloatingNav } from "../Components/Floating-navbar";
+import Footer from "../Components/Footer";
+import Grid from "../Components/Grid";
+import Hero from "../Components/Hero";
+import PictureAnimation from "../Components/PictureAnimation";
+import RecentProjects from "../Components/RecentProjects";
+import { navItems } from "../data";
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';

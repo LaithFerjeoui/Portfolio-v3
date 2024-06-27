@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@/utils/cn";
+import { cn } from "../utils/cn";
 import { BackgroundGradientAnimation } from "./Background-gradient-animation";
 import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
