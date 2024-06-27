@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Bankera",
-    des: "A Figma design turned into a Pixel-perfect UI/UX website",
+    des: "A Figma design of a banking platform's landing page, turned into a Pixel-perfect UI/UX website",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://bankera.netlify.app",
@@ -82,8 +82,9 @@ export const projects = [
   {
     id: 2,
     title: "Bankerise's BackOffice",
-    des: "Bankerise® is a Digital Banking Engagement Platform that helps Retail & Corporate Banks seamlessly join the Digital Bank 3.0 era.",
+    des: "Bankerise® is Proxym's Digital Banking Engagement Platform that helps Retail and Corporate Banks seamlessly join the Digital Bank 3.0 era. This project was developed during my time at Proxym, where I played Handled the development of Bankerise's back office. The back office is a centralized dashboard for managing all the platform's applications. It provides efficient management of multiple applications and reduces reliance on developers for minor changes, enabling banks to swiftly adapt and respond to evolving market needs. ",
     img: "/p2.png",
+    videosrc: "/backoffice.mp4",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/dock.svg"],
     git: "https://github.com/LaithFerjeoui/Bankerise-BackOffice-PROXYM"
   },
@@ -102,7 +103,7 @@ export const projects = [
     des: "e-Boost is a user-friendly, modern online learning platform crafted to boost the academic success of elementary school students. It offers engaging, interactive lessons across various subjects, utilizing multimedia elements like videos and quizzes to make learning fun and effective. The platform's intuitive design ensures that young learners can easily navigate and enjoy a personalized educational experience that supports their individual growth and development.",
     img: "/p5.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
-    videosrc: "/izanagi.mp4",
+
     git: "https://github.com/LaithFerjeoui/e-boostacademy"
   },
   {
