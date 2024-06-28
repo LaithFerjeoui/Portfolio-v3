@@ -99,21 +99,29 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Dog's Eye Anatomy: Medical Thesis",
+    des: "This platform showcases a detailed medical thesis on Dog's Eye Anatomy. Built with React for a dynamic and high-performance frontend, it leverages Tailwind CSS for modern, responsive layouts and styling. Framer Motion is used to create smooth, engaging animations, enhancing the overall user experience.",
+    img: "/p6.png",
+    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
+    videosrc: "",
+    git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project"
+  },
+  {
+    id: 5,
     title: "E-Boost Academy",
     des: "e-Boost is a user-friendly, modern online learning platform crafted to boost the academic success of elementary school students. It offers engaging, interactive lessons across various subjects, utilizing multimedia elements like videos and quizzes to make learning fun and effective. The platform's intuitive design ensures that young learners can easily navigate and enjoy a personalized educational experience that supports their individual growth and development.",
     img: "/p5.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
-
+    link: "https://e-boostacademy.vercel.app",
     git: "https://github.com/LaithFerjeoui/e-boostacademy"
   },
   {
-    id: 5,
+    id: 6,
     title: "One Percent - E-Commerce",
     des: "”One Percent” is an advanced e-commerce Fullstack platform built with Laravel and Filament. It ensures seamless UI-Database interaction and provides an organized admin dashboard for effortless management of products, orders, and users.",
     img: "/p4.png",
     iconLists: ["/lara.png"],
     git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel"
-
   },
 ];
 

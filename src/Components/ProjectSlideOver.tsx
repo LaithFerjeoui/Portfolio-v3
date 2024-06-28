@@ -35,10 +35,10 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                 leaveTo="translate-x-full"
                             >
                                 <Dialog.Panel className="pointer-events-auto w-screen max-w-lg">
-                                    <div className="flex h-full flex-col overflow-y-scroll bg-slate-950 py-6 shadow-xl rounded-lg " >
+                                    <div className="flex h-full flex-col overflow-y-scroll bg-gradient-to-b from-slate-950 to-slate-900 py-6 shadow-xl rounded-lg " >
                                         <div className="px-4 sm:px-6">
-                                            <div className="flex items-start justify-between">
-                                                <Dialog.Title className="text-lg font-semibold leading-6 text-gray-200">
+                                            <div className="flex items-center justify-between">
+                                                <Dialog.Title className="text-xl font-bold leading-6  text-transparent  bg-clip-text bg-gradient-to-r from-neutral-300 to-gray-200">
                                                     {project?.title}
                                                 </Dialog.Title>
                                                 <div className="ml-3 flex h-7 items-center">
@@ -63,7 +63,7 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                                             autoPlay
                                                             muted
                                                             loop
-                                                            className='w-full h-full rounded-xl'
+                                                            className='w-full h-full rounded-2xl'
                                                         >
                                                             Your browser does not support the video tag.
                                                         </video>
