@@ -3,6 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Button } from './MovingBorderButton'
 import { toast } from 'react-toastify'
+import Badge from './Badge'
 
 export default function ProjectSlideOver({ open, setOpen, project }: any) {
 
@@ -38,9 +39,13 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                     <div className="flex h-full flex-col overflow-y-scroll bg-gradient-to-b from-slate-950 to-slate-900 py-6 shadow-xl rounded-lg " >
                                         <div className="px-4 sm:px-6">
                                             <div className="flex items-center justify-between">
-                                                <Dialog.Title className="text-xl font-bold leading-6  text-transparent  bg-clip-text bg-gradient-to-r from-neutral-300 to-gray-200">
-                                                    {project?.title}
-                                                </Dialog.Title>
+                                                <div className='flex items-center gap-3'>
+                                                    <Dialog.Title className="text-xl font-bold leading-6  text-transparent  bg-clip-text bg-gradient-to-r from-neutral-300 to-gray-200">
+                                                        {project?.title}
+                                                    </Dialog.Title>
+                                                    <Badge type={project?.type} />
+                                                </div>
+
                                                 <div className="ml-3 flex h-7 items-center">
                                                     <button
                                                         type="button"

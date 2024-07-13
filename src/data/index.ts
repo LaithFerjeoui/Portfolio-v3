@@ -72,7 +72,8 @@ export const projects = [
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://bankera.netlify.app",
-    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel"
+    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel",
+    type: false
   },
   {
     id: 2,
@@ -81,7 +82,8 @@ export const projects = [
     img: "/p2.png",
     videosrc: "/backoffice.mp4",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/dock.svg"],
-    git: "https://github.com/LaithFerjeoui/Bankerise-BackOffice-PROXYM"
+    git: "https://github.com/LaithFerjeoui/Bankerise-BackOffice-PROXYM",
+    type: true
   },
   {
     id: 3,
@@ -90,16 +92,18 @@ export const projects = [
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/node.svg", "/ex.svg", "/auth0.png"],
     videosrc: "/izanagi.mp4",
-    git: "https://github.com/LaithFerjeoui/Full-Stack-Real-Estate-IZANAGI"
+    git: "https://github.com/LaithFerjeoui/Full-Stack-Real-Estate-IZANAGI",
+    type: true
   },
   {
     id: 4,
-    title: "Dog's Eye Anatomy: Medical Thesis",
+    title: "Dog's Eye Anatomy",
     des: "This platform showcases a detailed medical thesis on Dog's Eye Anatomy. Built with React for a dynamic and high-performance frontend, it leverages Tailwind CSS for modern, responsive layouts and styling. Framer Motion is used to create smooth, engaging animations, enhancing the overall user experience.",
     img: "/p6.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
-    git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project"
+    git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project",
+    type: false
   },
   {
     id: 5,
@@ -108,7 +112,8 @@ export const projects = [
     img: "/p5.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://e-boostacademy.vercel.app",
-    git: "https://github.com/LaithFerjeoui/e-boostacademy"
+    git: "https://github.com/LaithFerjeoui/e-boostacademy",
+    type: false
   },
   {
     id: 6,
@@ -116,7 +121,8 @@ export const projects = [
     des: "”One Percent” is an advanced e-commerce Fullstack platform built with Laravel and Filament. It ensures seamless UI-Database interaction and provides an organized admin dashboard for effortless management of products, orders, and users.",
     img: "/p4.png",
     iconLists: ["/lara.png"],
-    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel"
+    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel",
+    type: true
   },
 ];
 
