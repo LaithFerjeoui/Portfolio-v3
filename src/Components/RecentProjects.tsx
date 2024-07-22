@@ -32,7 +32,7 @@ const RecentProjects: React.FC = () => {
                 <span className='text-purple'>Recent Projects</span>
             </h1>
             <ProjectSlideOver open={slider} setOpen={setSlider} project={project} />
-            <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100'>
+            <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100 '>
                 {projects.map((item) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
@@ -41,9 +41,9 @@ const RecentProjects: React.FC = () => {
                     >
                         <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
                             <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                <div className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6  ? '' : 'bg-[#13162D]'}`}>
-                                    <img src={item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 ? item.img : '/bg.png'} alt="bgimg" />
-                                    {!(item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 ) && (
+                                <div className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7  ? '' : 'bg-[#13162D]'}`}>
+                                    <img src={item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7? item.img : '/bg.png'} alt="bgimg" />
+                                    {!(item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7) && (
                                         <img src={item.img} alt="cover" className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0" />
                                     )}
                                 </div>

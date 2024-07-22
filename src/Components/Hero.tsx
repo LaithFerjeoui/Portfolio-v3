@@ -27,7 +27,7 @@ const Hero = () => {
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-large lg:text-2xl text-blue-100'>
                         Hi, I&apos;m Laith , a passionate Web Developer based in Tunisia
                     </p>
-                    <a href="#about">
+                    <a href="#projects">
                         <MagicButton title='Show My Work' icon={<FaLocationArrow/>} position='right' />
                     </a>
                 </div>
