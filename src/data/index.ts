@@ -97,6 +97,17 @@ export const projects = [
   },
   {
     id: 4,
+    title: "ARTIWEB",
+    des: "A modern website for a Artiweb Web Solutions Company.",
+    img: "/p8.png",
+    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
+    videosrc: "",
+    link:"https://artiweb.tn",
+    git: "https://github.com/LaithFerjeoui/ARTIWEB",
+    type: false
+  },
+  {
+    id: 5,
     title: "Dog's Heart Anatomy",
     des: "This platform showcases a detailed medical thesis on Dog's Heart Anatomy. Built with React for a dynamic and high-performance frontend, it leverages Tailwind CSS for modern, responsive layouts and styling. Framer Motion is used to create smooth, engaging animations, enhancing the overall user experience.",
     img: "/p7.png",
