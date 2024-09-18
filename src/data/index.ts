@@ -124,7 +124,8 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
     git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project",
-    type: false
+    type: false,
+    link:"https://eye-anatomy.vercel.app",
   },
   {
     id: 6,
