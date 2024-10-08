@@ -80,7 +80,7 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                                 {project?.des}
                                             </span>
                                             <div className='mt-5'>
-                                                <span className='font-bold text-lg '>
+                                                <span className='font-bold text-lg text-neutral-200 '>
                                                     Technologies:
                                                 </span>
                                                 <div className="flex items-center my-3">
@@ -100,7 +100,7 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                             </div>
                                             <div className='flex justify-center items-center gap-4 my-4'>
                                                 <a href={project?.git}>
-                                                    <button className="shadow-[inset_0_0_0_2px_#616467]  px-10 py-1 sm:py-1.5 rounded-full tracking-widest uppercase font-medium bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200 text-sm">
+                                                    <button className="shadow-[inset_0_0_0_2px_#616467]  px-10 py-1 sm:py-1.5 rounded-full tracking-widest uppercase font-medium bg-transparent hover:bg-[#616467] hover:text-white text-neutral-200 dark:text-neutral-200 transition duration-200 text-sm">
                                                         Github Repo
                                                     </button>
                                                 </a>
@@ -116,7 +116,7 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
 
                                                         <Button
 
-                                                            className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 "
+                                                            className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 text-neutral-200"
                                                             onClick={() => toast.info("This Project is not Deployed yet.")}
                                                         >
                                                             View Demo

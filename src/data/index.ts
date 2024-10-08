@@ -91,7 +91,7 @@ export const projects = [
     des: "A Modern MERN Stack Real Estate Platform,integrates Auth0 for secure authentication, React and Tailwind CSS for a sleek and modern user interface, and Framer Motion for engaging animations. The backend is powered by Express.js and Node.js, with MongoDB handling the database, ensuring robust functionality and scalability. The platform offers advanced features such as property booking, favorites, user property listings and even Adding your own property",
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/node.svg", "/ex.svg", "/auth0.png"],
-    videosrc: "/izanagi.mp4",
+    videosrc: "/Izanagi.mp4",
     git: "https://github.com/LaithFerjeoui/Full-Stack-Real-Estate-IZANAGI",
     type: true
   },
