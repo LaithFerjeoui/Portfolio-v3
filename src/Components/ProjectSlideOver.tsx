@@ -5,8 +5,16 @@ import { Button } from './MovingBorderButton'
 import { toast } from 'react-toastify'
 import Badge from './Badge'
 
-export default function ProjectSlideOver({ open, setOpen, project }: any) {
+export default function ProjectSlideOver({ open, setOpen, project, setUDModal }: any) {
 
+    const handleUnderDevelopmentProject = () => {
+        setOpen(false)
+        setUDModal(true)
+    }
+    const handleProjectRedirect = () => {
+        setOpen(false)
+        window.open(project?.link);
+    }
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -105,14 +113,21 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
                                                     </button>
                                                 </a>
                                                 {
-                                                    project?.link ? (<a href={project?.link}>
+                                                    project?.link && project?.underDev ? (<div onClick={handleUnderDevelopmentProject}>
                                                         <Button
                                                             type="button"
-                                                            className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 "
+                                                            className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 text-neutral-200"
                                                         >
                                                             View Demo
                                                         </Button>
-                                                    </a>) : (
+                                                    </div>) : project?.link ? (<div onClick={handleProjectRedirect}>
+                                                        <Button
+                                                            type="button"
+                                                            className="rounded-md bg-[--border-color] px-3.5 py-2.5 text-sm font-semibold text-[--txt] shadow-sm hover:scale-105 duration-300 text-neutral-200"
+                                                        >
+                                                            View Demo
+                                                        </Button>
+                                                    </div>) : (
 
                                                         <Button
 
@@ -125,9 +140,6 @@ export default function ProjectSlideOver({ open, setOpen, project }: any) {
 
                                                     )
                                                 }
-
-
-
                                             </div>
                                         </div>
                                     </div>

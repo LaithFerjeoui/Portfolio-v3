@@ -1,9 +1,12 @@
 "use client"
+
 import { projects } from '../data'
 import React, { useState, useCallback } from 'react'
 import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
 import ProjectSlideOver from './ProjectSlideOver'
+import UnderDevelopmentModal from './UnderDevelopmentModal'
+
 
 interface Icon {
     src: string;
@@ -15,10 +18,12 @@ interface Project {
     des: string;
     img: string;
     iconLists: Icon[];
+    link: string;
 }
 
 const RecentProjects: React.FC = () => {
     const [slider, setSlider] = useState<boolean>(false)
+    const [projectUD, setProjectUD] = useState<boolean>(false)
     const [project, setProject] = useState<Project | null>(null)
 
     const handleClick = useCallback((item: any) => {
@@ -31,7 +36,8 @@ const RecentProjects: React.FC = () => {
                 A small Selection of my{' '}
                 <span className='text-purple'>Recent Projects</span>
             </h1>
-            <ProjectSlideOver open={slider} setOpen={setSlider} project={project} />
+            <ProjectSlideOver open={slider} setOpen={setSlider} project={project} setUDModal={setProjectUD} />
+            <UnderDevelopmentModal open={projectUD} setOpen={setProjectUD} project={project} />
             <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100 '>
                 {projects.map((item) => (
                     <div
@@ -41,8 +47,8 @@ const RecentProjects: React.FC = () => {
                     >
                         <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
                             <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                <div className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7  ? '' : 'bg-[#13162D]'}`}>
-                                    <img src={item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7? item.img : '/bg.png'} alt="bgimg" />
+                                <div className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7 ? '' : 'bg-[#13162D]'}`}>
+                                    <img src={item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7 ? item.img : '/bg.png'} alt="bgimg" />
                                     {!(item.id === 3 || item.id === 4 || item.id === 5 || item.id === 6 || item.id === 7) && (
                                         <img src={item.img} alt="cover" className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0" />
                                     )}
@@ -83,6 +89,7 @@ const RecentProjects: React.FC = () => {
                     </div>
                 ))}
             </div>
+
         </div>
     )
 }

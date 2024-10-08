@@ -102,7 +102,7 @@ export const projects = [
     img: "/p8.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
-    link:"https://artiweb.tn",
+    link: "https://artiweb.tn",
     git: "https://github.com/LaithFerjeoui/ARTIWEB",
     type: false
   },
@@ -114,7 +114,8 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
     git: "https://github.com/LaithFerjeoui/Heart-Anatomy-Medical-Thesis",
-    type: false
+    type: false,
+    underDev: true,
   },
   {
     id: 5,
@@ -125,7 +126,8 @@ export const projects = [
     videosrc: "",
     git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project",
     type: false,
-    link:"https://eye-anatomy.vercel.app",
+    underDev: true,
+    link: "https://eye-anatomy.vercel.app",
   },
   {
     id: 6,
