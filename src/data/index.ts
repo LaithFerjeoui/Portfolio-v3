@@ -116,6 +116,7 @@ export const projects = [
     git: "https://github.com/LaithFerjeoui/Heart-Anatomy-Medical-Thesis",
     type: false,
     underDev: true,
+    link: "https://heart-anatomy.vercel.app",
   },
   {
     id: 5,
