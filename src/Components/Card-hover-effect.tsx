@@ -78,7 +78,7 @@ export const Card = ({
         <div className="p-4">{children}</div>
        
       </div>
-      <PiCertificateLight  size={25} className="absolute right-6 bottom-6"/>
+      <PiCertificateLight  size={25} className="absolute right-4 bottom-4"/>
     </div>
   );
 };
@@ -105,7 +105,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 mb-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
