@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GrProjects } from "react-icons/gr";
 import { LiaAwardSolid } from "react-icons/lia";
+import { Testimonials } from "../Components/Testimonials";
 const navItems = [
   {
     name: "About",
@@ -41,6 +42,7 @@ export default function Home() {
         <Grid />
         <RecentProjects />
         <Certifications />
+        <Testimonials />
         <Footer />
       </div>
       <ToastContainer
