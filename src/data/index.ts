@@ -67,12 +67,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Bankera",
-    des: "A Figma design of a banking platform's landing page, turned into a Pixel-perfect UI/UX website",
+    title: "Pillar App",
+    des: "A modern and responsive frontend website built with Next.js to showcase The Pillar mobile app. This project was commissioned by The Pillar team to revamp their classic website and give it a fresh, modern look. It features a sleek Tailwind CSS design, smooth animations powered by Framer Motion, and a fully functional light/dark mode toggle. The website also includes an engaging blog section, ensuring a dynamic and user-friendly experience with seamless navigation and responsive design.",
     img: "/p1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
-    link: "https://bankera.netlify.app",
-    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    link: "https://www.thepillar.app/",
+    git: "https://github.com/LaithFerjeoui/the-pillar-app",
     type: false
   },
   {
@@ -178,33 +178,17 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Laith has an exceptional ability to solve complex problems with a proactive and innovative mindset. His creative approach to challenges and dedication to delivering high-quality solutions have greatly impressed me. Working with Laith has been an absolute pleasure, and I have no doubt he will continue to excel in his career and make a significant impact wherever he goes.",
+    name: "Bassem Kortas",
+    designation: "Technical Lead Developer at Proxym",
+    src: "/testimonials/bassem.jpg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Laith Ferjeoui has been an invaluable part of ARTIWEB, excelling as a Full Stack Developer and promoted later to a Team Lead Developer. His exceptional problem-solving skills, leadership, and technical expertise set him apart. With deep proficiency in React, Next.js, and Laravel, he has consistently delivered scalable, high-performance solutions while mentoring his team and ensuring top-quality development. His ability to architect efficient and maintainable software makes him a standout professional in his field.",
+    name: "Mohamed Achref Besbes",
+    designation: "Founder & CEO of Artiweb",
+    src: "/testimonials/achref.png",
   },
 ];
 
