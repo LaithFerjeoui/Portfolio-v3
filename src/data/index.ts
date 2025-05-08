@@ -178,6 +178,13 @@ export const projects = [
 export const testimonials = [
   {
     quote:
+      "Laith Ferjeoui played a key role in our Start-Up’s success as Director of Web Development. He delivered high-quality, pixel-perfect websites like the Pillar app, Simplexity and Height GPT, with clean code and smart architecture. His skills in front-end development, SEO optimization, and problem-solving made a major impact. Highly recommended!",
+    name: "Benjamin Ian Chen",
+    designation: "CEO and Co-Founder of Boulevard Legacy",
+    src: "/testimonials/benj.png",
+  },
+  {
+    quote:
       "Laith has an exceptional ability to solve complex problems with a proactive and innovative mindset. His creative approach to challenges and dedication to delivering high-quality solutions have greatly impressed me. Working with Laith has been an absolute pleasure, and I have no doubt he will continue to excel in his career and make a significant impact wherever he goes.",
     name: "Bassem Kortas",
     designation: "Technical Lead Developer at Proxym",
