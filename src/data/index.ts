@@ -195,10 +195,17 @@ export const testimonials = [
   },
   {
     quote:
-      "Laith Ferjeoui has been an invaluable part of ARTIWEB, excelling as a Full Stack Developer and promoted later to a Team Lead Developer. His exceptional problem-solving skills, leadership, and technical expertise set him apart. With deep proficiency in React, Next.js, and Laravel, he has consistently delivered scalable, high-performance solutions while mentoring his team and ensuring top-quality development. His ability to architect efficient and maintainable software makes him a standout professional in his field.",
+      "Dans le cadre de l’élaboration de mon site web pédagogique (thèse vétérinaire) j’ai eu la chance d’être accompagné par Laith Ferjaoui. Laith a su faire preuve d’une grande compétence technique tout au long du projet, en assurant la conception, le développement et l’optimisation du site avec rigueur et efficacité. Il a su comprendre les enjeux pédagogiques et scientifiques du projet, en les traduisant avec pertinence dans une interface claire, accessible et fonctionnelle.",
     name: "Mohamed Achref Besbes",
     designation: "Founder & CEO of Artiweb",
     src: "/testimonials/achref.png",
+  },
+    {
+    quote:
+      "Laith Ferjeoui has been an invaluable part of ARTIWEB, excelling as a Full Stack Developer and promoted later to a Team Lead Developer. His exceptional problem-solving skills, leadership, and technical expertise set him apart. With deep proficiency in React, Next.js, and Laravel, he has consistently delivered scalable, high-performance solutions while mentoring his team and ensuring top-quality development. His ability to architect efficient and maintainable software makes him a standout professional in his field.",
+    name: "Islem Zoghlami",
+    designation: "Client",
+    src: "/testimonials/islem.png",
   },
 ];
 
