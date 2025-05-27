@@ -87,6 +87,17 @@ export default function ProjectSlideOver({ open, setOpen, project, setUDModal }:
                                             <span className='text-gray-300'>
                                                 {project?.des}
                                             </span>
+                                            {project?.figma && (
+                                                <div className="mt-2 mb-4">
+                                                    <span className="block text-white text-sm lg:text-lg font-light lg:font-normal break-words">
+                                                        Figma Design:&nbsp;
+                                                        <a href={project.figma} target="_blank" rel="noopener noreferrer" className='text-cyan-500'>
+                                                            {project.figma}
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            )}
+
                                             <div className='mt-5'>
                                                 <span className='font-bold text-lg text-neutral-200 '>
                                                     Technologies:

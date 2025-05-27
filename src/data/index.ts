@@ -156,23 +156,26 @@ export const projects = [
   },
   {
     id: 9,
-    title: "E-Boost Academy",
-    des: "e-Boost is a user-friendly, modern online learning platform crafted to boost the academic success of elementary school students. It offers engaging, interactive lessons across various subjects, utilizing multimedia elements like videos and quizzes to make learning fun and effective. The platform's intuitive design ensures that young learners can easily navigate and enjoy a personalized educational experience that supports their individual growth and development.",
+    title: "Simplexity",
+    des: "I developed the landing page for Simplexity, a powerful toolkit designed to help entrepreneurs grow their businesses and achieve their goals. Starting from a Figma design, I transformed the concept into a fully responsive, pixel-perfect landing page. The page highlights key features such as seamless networking, centralized connection management across platforms, and intuitive user experience. My role covered the entire front-end implementation — from translating the design to clean, maintainable code — ensuring both visual accuracy and performance optimization.",
     img: "/p5.png",
-    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
-    link: "https://e-boostacademy.vercel.app",
-    git: "https://github.com/LaithFerjeoui/e-boostacademy",
+    figma: "https://imgur.com/a/PVPK7OL",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    link: "https://www.simplexity.network",
+    git: "https://github.com/LaithFerjeoui/Simplexity",
     type: false
   },
   {
     id: 10,
-    title: "One Percent - E-Commerce",
-    des: "”One Percent” is an advanced e-commerce Fullstack platform built with Laravel and Filament. It ensures seamless UI-Database interaction and provides an organized admin dashboard for effortless management of products, orders, and users.",
+    title: "KD Marché PRO",
+    des: "“KD Marché PRO” is an advanced fullstack e-commerce platform built for professional clients. Designed for wholesale (vente en gros) and bulk purchases (en palette), it allows businesses to apply for access. Once a client submits an application, the admin reviews and either approves or rejects it through the backoffice. Approved clients can then log in and shop directly on the platform, accessing tailored products and pricing.",
     img: "/p4.png",
-    iconLists: ["/lara.png"],
-    git: "https://github.com/LaithFerjeoui/One-Percent-E-commerce-laravel",
-    type: true
-  },
+    iconLists: ["/lara.png", "/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    link: "https://kdmarche-pro.vercel.app",
+    git: "https://github.com/LaithFerjeoui/kdmarche-pro",
+    type: true 
+  }
+
 ];
 
 export const testimonials = [
