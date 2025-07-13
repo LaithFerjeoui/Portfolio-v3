@@ -1,6 +1,6 @@
 import { MdOutlineConnectWithoutContact, MdOutlinePerson } from "react-icons/md";
 import Certifications from "../Components/Certifications";
-import { FloatingNav } from "../Components/Floating-navbar";
+import { NavbarDemo } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Grid from "../Components/Grid";
 import Hero from "../Components/Hero";
@@ -11,7 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GrProjects } from "react-icons/gr";
 import { LiaAwardSolid } from "react-icons/lia";
 import { Testimonials } from "../Components/Testimonials";
-const navItems = [
+import { NavItem } from "./types/nav";
+
+const navItems: NavItem[] = [
   {
     name: "About",
     link: "#about",
@@ -28,35 +30,42 @@ const navItems = [
       <LiaAwardSolid className="h-5 w-5 text-neutral-500 dark:text-white" />
     ),
   },
+  {
+    name: "Testimonials", link: "#testimonials",
+    icon: (
+      <LiaAwardSolid className="h-5 w-5 text-neutral-500 dark:text-white" />
+    ),
+  },
   { name: "Contact", link: "#contact", icon: <MdOutlineConnectWithoutContact className="h-5 w-5 text-neutral-500 dark:text-white" /> },
 ];
 
 export default function Home() {
   return (
-    <main className="bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 dark ">
-      <div className="max-w-7xl w-full ">
-        <FloatingNav navItems={navItems}
+    <NavbarDemo navItems={navItems}>
+      <main className="bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 dark ">
+        <div className="max-w-7xl w-full ">
+          <Hero />
+          <PictureAnimation />
+          <Grid />
+          <RecentProjects />
+          <Certifications />
+          <Testimonials />
+          <Footer />
+        </div>
+
+        <ToastContainer
+          position="top-left"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
         />
-        <Hero />
-        <PictureAnimation />
-        <Grid />
-        <RecentProjects />
-        <Certifications />
-        <Testimonials />
-        <Footer />
-      </div>
-      <ToastContainer
-        position="top-left"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </main>
+      </main >
+    </NavbarDemo>
   );
 }
