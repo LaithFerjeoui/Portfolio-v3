@@ -102,21 +102,21 @@ export const projects = [
     img: "/p8.png",
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
-    link: "https://artiweb.tn",
+    link: "https://artiweb-ivory.vercel.app",
     git: "https://github.com/LaithFerjeoui/ARTIWEB",
     type: false
   },
   {
     id: 5,
-    title: "Dog's Heart Anatomy",
-    des: "This platform showcases a detailed medical thesis on Dog's Heart Anatomy. Built with React for a dynamic and high-performance frontend, it leverages Tailwind CSS for modern, responsive layouts and styling. Framer Motion is used to create smooth, engaging animations, enhancing the overall user experience.",
-    img: "/p7.png",
-    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
+    title: "Gian Burrasca",
+    des: "Gian Burrasca is a modern, responsive frontend website built for an Italian language school that teaches Italian exclusively through native Italian instructors. The platform offers structured language learning from A1 to B2 levels, tailored for individuals planning to visit or relocate to Italy for studies, work, tourism, or personal growth.Developed using Next.js, Tailwind CSS, and Framer Motion, the site delivers a fast, visually engaging, and accessible user experience. Smooth animations and a clean UI enhance navigation and usability across all devices.",
+    img: "/p7.jpg",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
     videosrc: "",
-    git: "https://github.com/LaithFerjeoui/Heart-Anatomy-Medical-Thesis",
+    git: "https://github.com/LaithFerjeoui/gian-burrasca",
     type: false,
-    underDev: true,
-    link: "https://heart-anatomy.vercel.app",
+    underDev: false,
+    link: "https://gian-burrasca.com",
   },
   {
     id: 6,
@@ -144,15 +144,15 @@ export const projects = [
   },
   {
     id: 8,
-    title: "PH-Diagnostics",
-    des: "This project represents a medical equipment and machines e-commerce company specializing in providing advanced equipment for medical laboratories. It highlights their extensive product catalog, achievements, and contributions to the medical field. Designed to showcase their work effectively, it features a modern, professional interface with engaging animations and smooth navigation.",
+    title: "OMCC",
+    des: "OMMC is a comprehensive web platform for the Ontario Muslim Community Center, built using Next.js, Tailwind CSS, Framer Motion, and Laravel. It consists of three apps: a public website to showcase programs, events, and donations; an admin dashboard to manage content and users; and a member dashboard for exclusive access to services and updates. Laravel serves as the centralized API backend, ensuring scalability, security, and role-based access.",
     img: "/p10.png",
-    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg", "/lara.png"],
     videosrc: "",
-    git: "https://github.com/LaithFerjeoui/ph-diagnostics",
-    type: false,
+    git: "https://github.com/LaithFerjeoui/omcc",
+    type: true,
     underDev: true,
-    link: "https://ph-diagnostics.vercel.app",
+    link: "https://ontariomcc.ca",
   },
   {
     id: 9,
@@ -173,7 +173,7 @@ export const projects = [
     iconLists: ["/lara.png", "/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://kdmarche-pro.vercel.app",
     git: "https://github.com/LaithFerjeoui/kdmarche-pro",
-    type: true 
+    type: true
   }
 
 ];
@@ -200,7 +200,7 @@ export const testimonials = [
     designation: "Founder & CEO of Artiweb",
     src: "/testimonials/achref.png",
   },
-    {
+  {
     quote:
       "Dans le cadre de l’élaboration de mon site web pédagogique (thèse vétérinaire) j’ai eu la chance d’être accompagné par Laith Ferjaoui. Laith a su faire preuve d’une grande compétence technique tout au long du projet, en assurant la conception, le développement et l’optimisation du site avec rigueur et efficacité. Il a su comprendre les enjeux pédagogiques et scientifiques du projet, en les traduisant avec pertinence dans une interface claire, accessible et fonctionnelle.",
     name: "Islem Zoghlami",
