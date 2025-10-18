@@ -1,9 +1,8 @@
-
-
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize Responsive Design for seamless user experiences on all devices",
+    title:
+      "I prioritize Responsive Design for seamless user experiences on all devices",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -73,7 +72,7 @@ export const projects = [
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://www.thepillar.app/",
     git: "https://github.com/LaithFerjeoui/the-pillar-app",
-    type: false
+    type: false,
   },
   {
     id: 2,
@@ -83,20 +82,43 @@ export const projects = [
     videosrc: "/backoffice.mp4",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/dock.svg"],
     git: "https://github.com/LaithFerjeoui/Bankerise-BackOffice-PROXYM",
-    type: true
+    type: true,
   },
   {
     id: 3,
+    title: "ByrsaLabs",
+    des: "A comprehensive fullstack website for Byrsa Labs, a global software consultancy and technical advisory firm specializing in scalable web and emerging technologies. The platform features a modern, responsive frontend built with Next.js, Tailwind CSS, and Framer Motion, delivering an engaging user experience. The project includes a complete internal dashboard for services management including job management, blog management, news management, contact handling, and general company statistics. This solution enables Byrsa Labs to showcase their expertise in partnering with startups and enterprises to design and build exceptional digital products while providing efficient content management capabilities.",
+    img: "/p5.png",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    link: "https://www.byrsalabs.com",
+    git: "https://github.com/LaithFerjeoui/ByrsaLink",
+    type: true,
+    underDev: false,
+  },
+  {
+    id: 4,
+    title: "Helo Solutions",
+    des: "A comprehensive fullstack website for HELO SOLUTIONS, a company building durable systems with a focus on leveraging the strengths of Generative AI. The platform features a modern, responsive frontend built with Next.js, Tailwind CSS, and Framer Motion, delivering an engaging user experience. The project includes a complete internal dashboard for blog management, job management, contact handling, and general company statistics. This solution enables HELO to showcase their AI engineering work at the frontier of autonomous systems while providing efficient content management capabilities.",
+    img: "/p6.png",
+    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
+    videosrc: "",
+    git: "https://github.com/LaithFerjeoui/Helo-Solutions",
+    type: true,
+    underDev: false,
+    link: "https://www.helosolutions.ai", 
+  },
+  {
+    id: 5,
     title: "Izanagi - Real Estate Platform",
     des: "A Modern MERN Stack Real Estate Platform,integrates Auth0 for secure authentication, React and Tailwind CSS for a sleek and modern user interface, and Framer Motion for engaging animations. The backend is powered by Express.js and Node.js, with MongoDB handling the database, ensuring robust functionality and scalability. The platform offers advanced features such as property booking, favorites, user property listings and even Adding your own property",
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/node.svg", "/ex.svg", "/auth0.png"],
     videosrc: "/Izanagi.mp4",
     git: "https://github.com/LaithFerjeoui/Full-Stack-Real-Estate-IZANAGI",
-    type: true
+    type: true,
   },
   {
-    id: 4,
+    id: 6,
     title: "ARTIWEB",
     des: "A modern website for a Artiweb Web Solutions Company.",
     img: "/p8.png",
@@ -104,10 +126,10 @@ export const projects = [
     videosrc: "",
     link: "https://artiweb-ivory.vercel.app",
     git: "https://github.com/LaithFerjeoui/ARTIWEB",
-    type: false
+    type: false,
   },
   {
-    id: 5,
+    id: 7,
     title: "Gian Burrasca",
     des: "Gian Burrasca is a modern, responsive frontend website built for an Italian language school that teaches Italian exclusively through native Italian instructors. The platform offers structured language learning from A1 to B2 levels, tailored for individuals planning to visit or relocate to Italy for studies, work, tourism, or personal growth.Developed using Next.js, Tailwind CSS, and Framer Motion, the site delivers a fast, visually engaging, and accessible user experience. Smooth animations and a clean UI enhance navigation and usability across all devices.",
     img: "/p7.jpg",
@@ -119,19 +141,7 @@ export const projects = [
     link: "https://gian-burrasca.com",
   },
   {
-    id: 6,
-    title: "Dog's Eye Anatomy",
-    des: "This platform showcases a detailed medical thesis on Dog's Eye Anatomy. Built with React for a dynamic and high-performance frontend, it leverages Tailwind CSS for modern, responsive layouts and styling. Framer Motion is used to create smooth, engaging animations, enhancing the overall user experience.",
-    img: "/p6.png",
-    iconLists: ["/re.svg", "/tail.svg", "/fm.svg"],
-    videosrc: "",
-    git: "https://github.com/LaithFerjeoui/Eye-Anatomy-Medical-Project",
-    type: false,
-    underDev: true,
-    link: "https://eye-anatomy.vercel.app",
-  },
-  {
-    id: 7,
+    id: 8,
     title: "Vintage Wines",
     des: "This modern landing page exudes vintage and old-school vibes, beautifully showcasing Rick's exclusive vintage liquor collection. Built with a focus on captivating user experience, it features highly impressive animations and smooth scrolling effects powered by GSAP and Framer Motion, creating an engaging and nostalgic journey for visitors.",
     img: "/p9.png",
@@ -143,7 +153,7 @@ export const projects = [
     link: "https://vintage-wines-collection.vercel.app",
   },
   {
-    id: 8,
+    id: 9,
     title: "OMCC",
     des: "OMMC is a comprehensive web platform for the Ontario Muslim Community Center, built using Next.js, Tailwind CSS, Framer Motion, and Laravel. It consists of three apps: a public website to showcase programs, events, and donations; an admin dashboard to manage content and users; and a member dashboard for exclusive access to services and updates. Laravel serves as the centralized API backend, ensuring scalability, security, and role-based access.",
     img: "/p10.png",
@@ -151,31 +161,19 @@ export const projects = [
     videosrc: "",
     git: "https://github.com/LaithFerjeoui/omcc",
     type: true,
-    underDev: true,
+    underDev: false,
     link: "https://ontariomcc.ca",
-  },
-  {
-    id: 9,
-    title: "Simplexity",
-    des: "I developed the landing page for Simplexity, a powerful toolkit designed to help entrepreneurs grow their businesses and achieve their goals. Starting from a Figma design, I transformed the concept into a fully responsive, pixel-perfect landing page. The page highlights key features such as seamless networking, centralized connection management across platforms, and intuitive user experience. My role covered the entire front-end implementation — from translating the design to clean, maintainable code — ensuring both visual accuracy and performance optimization.",
-    img: "/p5.png",
-    figma: "https://imgur.com/a/PVPK7OL",
-    iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
-    link: "https://www.simplexity.network",
-    git: "https://github.com/LaithFerjeoui/Simplexity",
-    type: false
   },
   {
     id: 10,
     title: "KD Marché PRO",
-    des: "“KD Marché PRO” is an advanced fullstack e-commerce platform built for professional clients. Designed for wholesale (vente en gros) and bulk purchases (en palette), it allows businesses to apply for access. Once a client submits an application, the admin reviews and either approves or rejects it through the backoffice. Approved clients can then log in and shop directly on the platform, accessing tailored products and pricing.",
+    des: "KD Marché PRO is an advanced fullstack e-commerce platform built for professional clients. Designed for wholesale (vente en gros) and bulk purchases (en palette), it allows businesses to apply for access. Once a client submits an application, the admin reviews and either approves or rejects it through the backoffice. Approved clients can then log in and shop directly on the platform, accessing tailored products and pricing.",
     img: "/p4.png",
     iconLists: ["/lara.png", "/next.svg", "/re.svg", "/tail.svg", "/fm.svg"],
     link: "https://kdmarche-pro.vercel.app",
     git: "https://github.com/LaithFerjeoui/kdmarche-pro",
-    type: true
-  }
-
+    type: true,
+  },
 ];
 
 export const testimonials = [
@@ -277,16 +275,16 @@ export const socialMedia = [
   {
     id: 2,
     img: "/wha.svg",
-    href: "https://wa.me/21694418796"
+    href: "https://wa.me/21694418796",
   },
   {
     id: 1,
     img: "/git.svg",
-    href: "https://github.com/LaithFerjeoui"
+    href: "https://github.com/LaithFerjeoui",
   },
   {
     id: 3,
     img: "/link.svg",
-    href: "https://www.linkedin.com/in/laith-ferjeoui-22507226a/"
+    href: "https://www.linkedin.com/in/laith-ferjeoui-22507226a/",
   },
 ];
