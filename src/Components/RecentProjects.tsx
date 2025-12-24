@@ -6,6 +6,7 @@ import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
 import ProjectSlideOver from './ProjectSlideOver'
 import UnderDevelopmentModal from './UnderDevelopmentModal'
+import Image from 'next/image'
 
 
 interface Icon {
@@ -47,19 +48,23 @@ const RecentProjects: React.FC = () => {
                         onClick={() => handleClick(item)}
                     >
                         <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] mb-10">
                                 <div
                                     className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${[1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) ? '' : 'bg-[#13162D]'
                                         }`}
                                 >
-                                    <img
+                                    <Image
+                                        width={500}
+                                        height={500}
                                         src={
                                             [1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) ? item.img : '/bg.png'
                                         }
                                         alt="bgimg"
                                     />
                                     {![1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) && (
-                                        <img
+                                        <Image
+                                            width={500}
+                                            height={500}
                                             src={item.img}
                                             alt="cover"
                                             className="z-10 absolute -bottom-9 md:-bottom-11 lg:bottom-0"

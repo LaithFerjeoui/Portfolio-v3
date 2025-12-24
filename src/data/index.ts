@@ -193,6 +193,13 @@ export const testimonials = [
   },
   {
     quote:
+    "Lavorare con Laith Ferjeoui è stata un’ottima esperienza. Ha realizzato un sito moderno, intuitivo e perfettamente in linea con l’identità di Gian Burrasca. Grazie alla sua attenzione ai dettagli e alle buone pratiche SEO, il sito ha ottenuto un’ottima visibilità, arrivando tra i primi risultati sui motori di ricerca. Consigliato per professionalità e competenza.",
+    name: "Lucilla Pagliaroli",
+    designation: "CEO of Gian Burrasca - Italian Language School",
+    src: "/testimonials/lucilla.jpeg",
+  },
+  {
+    quote:
       "Laith Ferjeoui has been an invaluable part of ARTIWEB, excelling as a Full Stack Developer and promoted later to a Team Lead Developer. His exceptional problem-solving skills, leadership, and technical expertise set him apart. With deep proficiency in React, Next.js, and Laravel, he has consistently delivered scalable, high-performance solutions while mentoring his team and ensuring top-quality development. His ability to architect efficient and maintainable software makes him a standout professional in his field.",
     name: "Mohamed Achref Besbes",
     designation: "Founder & CEO of Artiweb",
