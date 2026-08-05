@@ -1,3 +1,10 @@
+export const stats = [
+  { id: 1, value: 4, suffix: "+", label: "Years of Experience" },
+  { id: 2, value: 25, suffix: "+", label: "Projects Delivered" },
+  { id: 3, value: 20, suffix: "+", label: "Happy Clients" },
+  { id: 4, value: 7, suffix: "", label: "Companies Worked With" },
+];
+
 export const gridItems = [
   {
     id: 1,
@@ -282,7 +289,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/wha.svg",
-    href: "https://wa.me/21694418796",
+    href: "https://wa.me/393520124367",
   },
   {
     id: 1,

@@ -4,7 +4,8 @@ import { NavbarDemo } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Grid from "../Components/Grid";
 import Hero from "../Components/Hero";
-import PictureAnimation from "../Components/PictureAnimation";
+import StatsBar from "../Components/StatsBar";
+import LaserFlow from "../Components/ui/lazer-flow";
 import RecentProjects from "../Components/RecentProjects";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -45,12 +46,24 @@ export default function Home() {
       <main className="bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 dark ">
         <div className="max-w-7xl w-full ">
           <Hero />
-          <PictureAnimation />
+          <StatsBar />
           <Grid />
           <RecentProjects />
           <Certifications />
           <Testimonials />
-          <Footer />
+          <div className="relative w-full">
+            {/* laser beam falling from above onto the footer */}
+            <div className="pointer-events-none absolute inset-x-0 -top-[32rem] bottom-0 z-0 mix-blend-screen [mask-image:linear-gradient(to_bottom,transparent,white_25%)]">
+              <LaserFlow
+                color="#CBACF9"
+                horizontalBeamOffset={0}
+                verticalBeamOffset={-0.05}
+                fogIntensity={0.35}
+                wispIntensity={4}
+              />
+            </div>
+            <Footer />
+          </div>
         </div>
 
         <ToastContainer

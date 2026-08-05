@@ -4,7 +4,9 @@ import { BackgroundGradientAnimation } from "./Background-gradient-animation";
 import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
 import animationData from '../data/confetti.json'
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+// react-lottie touches `document` at import time, so it must never load during SSR
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 export const BentoGrid = ({
@@ -176,7 +178,16 @@ export const BentoGridItem = ({
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* defaultProps don't survive the dynamic() wrapper, so pass them explicitly */}
+                <Lottie
+                  options={defaultOptions}
+                  height={200}
+                  width={400}
+                  eventListeners={[]}
+                  isStopped={false}
+                  isPaused={false}
+                  speed={1}
+                />
               </div>
 
               <MagicButton
