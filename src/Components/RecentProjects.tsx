@@ -41,27 +41,33 @@ const RecentProjects: React.FC = () => {
             <ProjectSlideOver open={slider} setOpen={setSlider} project={project} setUDModal={setProjectUD} />
             <UnderDevelopmentModal open={projectUD} setOpen={setProjectUD} project={project} />
             <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100 '>
-                {projects.map((item) => (
+                {projects.map((item) => {
+                    const framed = item.id === 2
+                    return (
                     <div
-                        className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+                        className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 xl:w-80 w-[80vw]"
                         key={item.id}
                         onClick={() => handleClick(item)}
                     >
                         <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] mb-10">
+                            <div className={`relative flex items-center justify-center sm:w-96 xl:w-80 w-[80vw] overflow-hidden h-[20vh] mb-10 ${item.featured ? 'rounded-md lg:rounded-3xl ring-1 ring-emerald-400/40 shadow-[0_0_40px_-8px_rgba(52,211,153,0.55)]' : ''}`}>
+                                {item.featured && (
+                                    <span className="absolute top-3 left-3 z-20 inline-flex items-center gap-1.5 rounded-full bg-black/70 backdrop-blur px-3 py-1 text-xs font-semibold tracking-wide text-emerald-300 ring-1 ring-inset ring-emerald-400/40">
+                                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                        My Product
+                                    </span>
+                                )}
                                 <div
-                                    className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${[1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) ? '' : 'bg-[#13162D]'
-                                        }`}
+                                    className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${framed ? 'bg-[#13162D]' : ''}`}
                                 >
                                     <Image
                                         width={500}
                                         height={500}
-                                        src={
-                                            [1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) ? item.img : '/bg.png'
-                                        }
+                                        src={framed ? '/bg.png' : item.img}
                                         alt="bgimg"
+                                        className={item.featured ? 'w-full h-full object-cover' : undefined}
                                     />
-                                    {![1, 3, 4, 5, 6, 7, 8, 9, 10].includes(item.id) && (
+                                    {framed && (
                                         <Image
                                             width={500}
                                             height={500}
@@ -98,7 +104,7 @@ const RecentProjects: React.FC = () => {
                                 </div>
 
                                 <div className="flex justify-center items-center">
-                                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                                    <p className="flex whitespace-nowrap lg:text-xl xl:text-lg md:text-xs text-sm text-purple">
                                         View Details
                                     </p>
                                     <FaLocationArrow className="ms-3" color="#CBACF9" />
@@ -106,7 +112,8 @@ const RecentProjects: React.FC = () => {
                             </div>
                         </PinContainer>
                     </div>
-                ))}
+                    )
+                })}
             </div>
 
         </div>

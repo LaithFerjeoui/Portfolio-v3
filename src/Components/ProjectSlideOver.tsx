@@ -52,6 +52,11 @@ export default function ProjectSlideOver({ open, setOpen, project, setUDModal }:
                                                         {project?.title}
                                                     </Dialog.Title>
                                                     <Badge type={project?.type} />
+                                                    {project?.featured && (
+                                                        <span className="inline-flex shrink-0 whitespace-nowrap items-center rounded-md bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-emerald-400/30">
+                                                            My Product
+                                                        </span>
+                                                    )}
                                                 </div>
 
                                                 <div className="ml-3 flex h-7 items-center">
@@ -118,11 +123,13 @@ export default function ProjectSlideOver({ open, setOpen, project, setUDModal }:
 
                                             </div>
                                             <div className='flex justify-center items-center gap-4 my-4'>
+                                                {project?.git && (
                                                 <a href={project?.git}>
                                                     <button className="shadow-[inset_0_0_0_2px_#616467]  px-10 py-1 sm:py-1.5 rounded-full tracking-widest uppercase font-medium bg-transparent hover:bg-[#616467] hover:text-white text-neutral-200 dark:text-neutral-200 transition duration-200 text-sm">
                                                         Github Repo
                                                     </button>
                                                 </a>
+                                                )}
                                                 {
                                                     project?.link && project?.underDev ? (<div onClick={handleUnderDevelopmentProject}>
                                                         <Button

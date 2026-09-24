@@ -82,6 +82,16 @@ export const projects = [
     type: false,
   },
   {
+    id: 11,
+    title: "Tramite · AI Agency SaaS",
+    des: "Tramite is my own product: a multi-tenant SaaS platform that helps study-abroad agencies manage the complete student journey, from initial consultation to university admission, document processing, visa applications, payments, and departure. Agencies get an operational dashboard for students, case stages, documents, applications, tasks, alerts, payments, and team workflows, while students get a dedicated portal to track progress, upload documents, complete tasks, and follow their university applications without endless WhatsApp messages or phone calls. It is built with organization-level data isolation, role-based access control, internationalization, auditability, and scalable tenant management. AI capabilities include document classification and extraction, deadline and mismatch detection, case triage, intelligent university matching, suggested replies, and personalized student guidance. An upcoming AI orchestration layer coordinates specialized agents for documents, applications, payments, visa workflows, and communications, respecting the same permissions as human users, with sensitive actions such as financial changes, record updates, and outgoing messages kept human-approved and fully auditable.",
+    img: "/p11.png",
+    iconLists: ["/next.svg", "/tail.svg", "/fastapi.svg", "/resend.svg", "/dock.svg"],
+    type: true,
+    featured: true,
+    link: "https://www.tramite.agency",
+  },
+  {
     id: 2,
     title: "Bankerise's BackOffice",
     des: "Bankerise® is Proxym's Digital Banking Engagement Platform that helps Retail and Corporate Banks seamlessly join the Digital Bank 3.0 era. This project was developed during my time at Proxym, where I played Handled the development of Bankerise's back office. The back office is a centralized dashboard for managing all the platform's applications. It provides efficient management of multiple applications and reduces reliance on developers for minor changes, enabling banks to swiftly adapt and respond to evolving market needs. ",
