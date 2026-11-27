@@ -29,8 +29,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "Domains I ship in",
+    description: "From banking to video",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -70,7 +70,123 @@ export const gridItems = [
   },
 ];
 
+// Most recent first. `period` is optional: add dates where you want them shown.
+export const experience = [
+  {
+    company: "HELO Solutions",
+    title: "Senior Software Engineer · AI Engineer",
+    period: "Present",
+    description:
+      "Building agentic products. Nebula is an AI chief of staff for founders on the Claude Agent SDK, with a per-tenant business memory, live research, and a daily executive brief. Countrix is an AI accounting platform where Vera, its financial controller agent, categorizes transactions and learns each business.",
+    technologies: ["Claude Agent SDK", "Python", "FastAPI", "Next.js", "PostgreSQL", "AWS"],
+    images: [
+      { src: "/p13.webp", alt: "Nebula" },
+      { src: "/p14.webp", alt: "Countrix" },
+    ],
+  },
+  {
+    company: "Tramite · Crealore",
+    title: "Founder, own products",
+    description:
+      "Designing, building, and shipping my own products end to end: Tramite, a multi-tenant SaaS for study-abroad agencies, and Crealore, a desktop AI video editor for Windows.",
+    technologies: ["Next.js", "FastAPI", "Electron", "React", "FFmpeg"],
+    images: [
+      { src: "/p11.png", alt: "Tramite" },
+      { src: "/p16.webp", alt: "Crealore" },
+    ],
+  },
+  {
+    company: "Boulevard Legacy",
+    title: "Director of Web Development",
+    description:
+      "Led web development for the start-up, delivering the Pillar app, Simplexity, and Height GPT websites with clean architecture and strong SEO.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    images: [{ src: "/p1.png", alt: "Pillar App" }],
+  },
+  {
+    company: "Artiweb",
+    title: "Full Stack Developer, then Team Lead Developer",
+    description:
+      "Delivered scalable React, Next.js, and Laravel solutions, then led and mentored the development team.",
+    technologies: ["React", "Next.js", "Laravel"],
+    images: [{ src: "/p8.png", alt: "Artiweb website" }],
+  },
+  {
+    company: "Proxym",
+    title: "Bankerise Back Office",
+    description:
+      "Built the back office of Bankerise, Proxym's digital banking platform: a centralized dashboard that lets banks manage the platform's applications without relying on developers.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Docker"],
+    images: [{ src: "/p2.png", alt: "Bankerise back office" }],
+  },
+];
+
 export const projects = [
+  {
+    id: 13,
+    ai: true,
+    title: "Nebula · AI Chief of Staff",
+    des: "Nebula is an agentic business operating system for founders, built at HELO Solutions. Its agent, Agent X, runs on the Claude Agent SDK: it interviews the founder by voice or text, captures data from connected SaaS tools, and distills it into a per-tenant Business Memory, a truth layer of observations, claims with confidence and temporal validity, and materialized entities. On top of that memory it researches the web to fill gaps, recalls a tiered RAG knowledge corpus to ground every answer, and synthesizes a daily Executive Brief with ranked items, provenance, and suggested actions. Founders work with Agent X in Co-Work, a persisted, memory-grounded chat that can run live research and read connected sources, while governed steering rules let it learn from feedback only after the user confirms them. The platform is a React SPA on Cloudflare Pages talking to a multi-tenant FastAPI service on AWS, with Celery workers fed by a Postgres outbox for capture, ingestion, synthesis, and a sibling marketing service that drafts and publishes content.",
+    img: "/p13.webp",
+    videosrc: "/nebula.mp4",
+    iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/fastapi.svg", "/dock.svg"],
+    type: true,
+    link: "https://nebula.helosolutions.ai",
+  },
+  {
+    id: 11,
+    ai: true,
+    title: "Tramite · AI Agency SaaS",
+    des: "Tramite is my own product: a multi-tenant SaaS platform that helps study-abroad agencies manage the complete student journey, from initial consultation to university admission, document processing, visa applications, payments, and departure. Agencies get an operational dashboard for students, case stages, documents, applications, tasks, alerts, payments, and team workflows, while students get a dedicated portal to track progress, upload documents, complete tasks, and follow their university applications without endless WhatsApp messages or phone calls. It is built with organization-level data isolation, role-based access control, internationalization, auditability, and scalable tenant management. AI capabilities include document classification and extraction, deadline and mismatch detection, case triage, intelligent university matching, suggested replies, and personalized student guidance. An upcoming AI orchestration layer coordinates specialized agents for documents, applications, payments, visa workflows, and communications, respecting the same permissions as human users, with sensitive actions such as financial changes, record updates, and outgoing messages kept human-approved and fully auditable.",
+    img: "/p11.png",
+    videosrc: "/tramite-demo.mp4",
+    iconLists: ["/next.svg", "/tail.svg", "/fastapi.svg", "/resend.svg", "/dock.svg"],
+    type: true,
+    featured: true,
+    link: "https://tramite.agency",
+  },
+  {
+    id: 16,
+    ai: true,
+    title: "Crealore · AI Video Editor",
+    des: "Crealore is my own product: a modern desktop video editor for Windows, built with Electron, React, TypeScript, and FFmpeg. One project holds the main video and its Reels, square, and portrait versions as separate timelines, so a single edit can be sent to every platform and exported at once. It has a multi-track timeline with trimming, splitting, snapping, and undo, real-time preview with on-canvas transform handles, keyframes, 67 looks, 48 transitions, beat detection that snaps cuts to the music, and export up to 4K through a single FFmpeg filter graph. AI tools work with the user's own OpenAI or Anthropic key, encrypted with Windows DPAPI: word-timed auto captions with karaoke styles, caption translation, AI voiceover, an AI writer for titles, hooks, and scripts, plus local silence removal. Crealore Pro is sold as a one-time licence through Lemon Squeezy, with a Next.js marketing site for features, pricing, and downloads.",
+    img: "/p16.webp",
+    videosrc: "/crealore-demo.mp4",
+    link: "https://crealore-app.vercel.app",
+    iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/node.svg", "/next.svg"],
+    type: true,
+    featured: true,
+  },
+  {
+    id: 14,
+    ai: true,
+    title: "Countrix · AI Accounting",
+    des: "Countrix is an AI-powered accounting platform for small businesses, built at HELO Solutions. Bank and card transactions sync through Plaid into durable background jobs on AWS SQS and Lambda, where an AI categorization pipeline, measured with golden, edge-case, and guardrail evals, files every transaction and learns each business's vendors so that one correction is applied forever. Vera, the built-in AI financial controller on the Anthropic SDK, handles onboarding, vendor pattern learning, bulk categorization, knowledge base rules, and auto-approve rules, combining a deterministic workflow controller with streamed LLM turns and layered memory. The platform also covers receipts and documents with OCR, contractor management, a tax estimator, financial reports, multi-organization workspaces with role-based permissions, Stripe subscriptions, and Better Auth with two-factor authentication, on Next.js, Prisma, and PostgreSQL deployed with AWS Amplify.",
+    img: "/p14.webp",
+    videosrc: "/countrix-demo.mp4",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg"],
+    type: true,
+  },
+  {
+    id: 12,
+    title: "Derby Sport",
+    des: "A complete redesign of Derby Sport, a sports shop in Ferrara running since 1986. The centerpiece is a real-time 3D football boot built with React Three Fiber: it rotates with the scroll in the hero, and a full-screen configurator lets customers click any of eight parts (forefoot, heel, graphic, logo, laces, collar, soleplate, studs) and recolor it with a custom shader that keeps the original leather detail, then add their design to the cart. The shop has a filterable catalog, product pages with zoom, size and color validation, a persisted cart, Ctrl+K search, a pickup-or-shipping checkout, and a working contact form with server actions. It is fully bilingual (Italian and English) using Next.js 16 root params and a typed dictionary, with live open/closed status, Google reviews, and a store map.",
+    img: "/p12.webp",
+    videosrc: "/derby.mp4",
+    iconLists: ["/next.svg", "/three.svg", "/ts.svg", "/tail.svg", "/fm.svg"],
+    type: true,
+    link: "https://derby-sport.vercel.app",
+  },
+  {
+    id: 15,
+    title: "Bar Marconi 47",
+    des: "A new website for Marconi 47, a bar and café under the porticoes of Via Marconi in Bologna. Built with Next.js, Tailwind CSS, and Motion, it pairs a warm editorial design with a photo menu that guests can filter by category or search, from breakfast and lunch to cocktails and wine. The site is bilingual (Italian and English), designed mobile-first for guests browsing at the table, and includes the bar's story, Google reviews, opening hours, and directions.",
+    img: "/p15.webp",
+    videosrc: "/marconi.mp4",
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg", "/fm.svg"],
+    type: false,
+    link: "https://bar-marconi.vercel.app",
+  },
   {
     id: 1,
     title: "Pillar App",
@@ -80,16 +196,6 @@ export const projects = [
     link: "https://www.thepillar.app/",
     git: "https://github.com/LaithFerjeoui/the-pillar-app",
     type: false,
-  },
-  {
-    id: 11,
-    title: "Tramite · AI Agency SaaS",
-    des: "Tramite is my own product: a multi-tenant SaaS platform that helps study-abroad agencies manage the complete student journey, from initial consultation to university admission, document processing, visa applications, payments, and departure. Agencies get an operational dashboard for students, case stages, documents, applications, tasks, alerts, payments, and team workflows, while students get a dedicated portal to track progress, upload documents, complete tasks, and follow their university applications without endless WhatsApp messages or phone calls. It is built with organization-level data isolation, role-based access control, internationalization, auditability, and scalable tenant management. AI capabilities include document classification and extraction, deadline and mismatch detection, case triage, intelligent university matching, suggested replies, and personalized student guidance. An upcoming AI orchestration layer coordinates specialized agents for documents, applications, payments, visa workflows, and communications, respecting the same permissions as human users, with sensitive actions such as financial changes, record updates, and outgoing messages kept human-approved and fully auditable.",
-    img: "/p11.png",
-    iconLists: ["/next.svg", "/tail.svg", "/fastapi.svg", "/resend.svg", "/dock.svg"],
-    type: true,
-    featured: true,
-    link: "https://www.tramite.agency",
   },
   {
     id: 2,

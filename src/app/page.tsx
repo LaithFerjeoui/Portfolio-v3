@@ -1,8 +1,10 @@
-import { MdOutlineConnectWithoutContact, MdOutlinePerson } from "react-icons/md";
+import { MdOutlineConnectWithoutContact, MdOutlinePerson, MdWorkOutline } from "react-icons/md";
 import Certifications from "../Components/Certifications";
 import { NavbarDemo } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Grid from "../Components/Grid";
+import Skills from "../Components/Skills";
+import Experience from "../Components/Experience";
 import Hero from "../Components/Hero";
 import StatsBar from "../Components/StatsBar";
 import LaserFlow from "../Components/ui/lazer-flow";
@@ -11,6 +13,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GrProjects } from "react-icons/gr";
 import { LiaAwardSolid } from "react-icons/lia";
+import { LuSparkles } from "react-icons/lu";
 import { Testimonials } from "../Components/Testimonials";
 import { NavItem } from "./types/nav";
 
@@ -21,9 +24,19 @@ const navItems: NavItem[] = [
     icon: <MdOutlinePerson className="h-5 w-5 text-neutral-500 dark:text-white" />,
   },
   {
+    name: "Skills",
+    link: "#skills",
+    icon: <LuSparkles className="h-5 w-5 text-neutral-500 dark:text-white" />,
+  },
+  {
     name: "Projects",
     link: "#projects",
     icon: <GrProjects className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Experience",
+    link: "#experience",
+    icon: <MdWorkOutline className="h-5 w-5 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Certifications", link: "#certifications",
@@ -48,12 +61,14 @@ export default function Home() {
           <Hero />
           <StatsBar />
           <Grid />
+          <Skills />
           <RecentProjects />
+          <Experience />
           <Certifications />
           <Testimonials />
           <div className="relative w-full">
             {/* laser beam falling from above onto the footer */}
-            <div className="pointer-events-none absolute inset-x-0 -top-[32rem] bottom-0 z-0 mix-blend-screen [mask-image:linear-gradient(to_bottom,transparent,white_25%)]">
+            <div className="pointer-events-none absolute inset-x-0 -top-24 md:-top-[32rem] bottom-0 z-0 mix-blend-screen [mask-image:linear-gradient(to_bottom,transparent,white_25%)]">
               <LaserFlow
                 color="#CBACF9"
                 horizontalBeamOffset={0}

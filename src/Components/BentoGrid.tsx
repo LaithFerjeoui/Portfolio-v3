@@ -52,8 +52,8 @@ export const BentoGridItem = ({
   titleClassName?: string,
   spareImg?: string,
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["NodeJS", "NextJS", "Laravel"];
+  const leftLists = ["Fintech", "AI agents", "SaaS"];
+  const rightLists = ["Banking", "E-commerce", "Video"];
   const [copied, setCopied] = useState(false);
 
   const defaultOptions = {
@@ -137,10 +137,10 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 2 && <GlobeDemo />}
 
-          {/* Tech stack list div */}
+          {/* Domains list div */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              {/* tech stack lists */}
+              {/* domain lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span

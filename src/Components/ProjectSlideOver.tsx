@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useCallback, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Button } from './MovingBorderButton'
@@ -6,6 +6,17 @@ import { toast } from 'react-toastify'
 import Badge from './Badge'
 
 export default function ProjectSlideOver({ open, setOpen, project, setUDModal }: any) {
+
+    // Play with sound: the panel opens on a click, so browsers allow it. If one still refuses, fall back to muted.
+    const startVideo = useCallback((video: HTMLVideoElement | null) => {
+        if (!video) return
+        video.muted = false
+        video.volume = 0.6
+        video.play().catch(() => {
+            video.muted = true
+            video.play().catch(() => { })
+        })
+    }, [])
 
     const handleUnderDevelopmentProject = () => {
         setOpen(false)
@@ -47,16 +58,16 @@ export default function ProjectSlideOver({ open, setOpen, project, setUDModal }:
                                     <div className="flex h-full flex-col overflow-y-scroll bg-gradient-to-b from-slate-950 to-slate-900 py-6 shadow-xl rounded-lg " >
                                         <div className="px-4 sm:px-6">
                                             <div className="flex items-center justify-between">
-                                                <div className='flex items-center gap-3'>
+                                                <div className='relative flex items-center gap-3'>
+                                                    {project?.featured && (
+                                                        <span className="absolute -top-5 left-0 whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.22em] text-emerald-300/90">
+                                                            Founded &amp; built by me
+                                                        </span>
+                                                    )}
                                                     <Dialog.Title className="text-xl font-bold leading-6  text-transparent  bg-clip-text bg-gradient-to-r from-neutral-300 to-gray-200">
                                                         {project?.title}
                                                     </Dialog.Title>
                                                     <Badge type={project?.type} />
-                                                    {project?.featured && (
-                                                        <span className="inline-flex shrink-0 whitespace-nowrap items-center rounded-md bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-emerald-400/30">
-                                                            My Product
-                                                        </span>
-                                                    )}
                                                 </div>
 
                                                 <div className="ml-3 flex h-7 items-center">
@@ -76,10 +87,11 @@ export default function ProjectSlideOver({ open, setOpen, project, setUDModal }:
                                                 {
                                                     project?.videosrc ? (
                                                         <video
+                                                            key={project?.videosrc}
+                                                            ref={startVideo}
                                                             src={project?.videosrc}
                                                             controls
-                                                            autoPlay
-                                                            muted
+                                                            playsInline
                                                             loop
                                                             className='w-full h-full rounded-2xl'
                                                         >

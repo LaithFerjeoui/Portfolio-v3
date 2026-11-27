@@ -3,9 +3,11 @@ import { Spotlight } from './Spotlight'
 import { GridBackgroundDemo } from './GridBackground'
 import { TextGenerateEffect } from './Text-generate-effect'
 import MagicButton from './MagicButton';
+import { TextLoop } from './ui/text-loop';
 import { FaLocationArrow } from 'react-icons/fa';
-const words = `Transforming Concepts into Seamless User Experiences
+const words = `From Interface to Infrastructure to AI Agents
 `;
+const focusAreas = ['Agentic AI systems', 'Complex backend engineering', 'Frontend design'];
 const Hero = () => {
     return (
         <div className='pb-20 pt-36 ' >
@@ -17,15 +19,15 @@ const Hero = () => {
             <GridBackgroundDemo />
             <div className='flex justify-center relative my-20 z-10'>
                 <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-                    <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
-                        Dynamic web Experience
+                    <h2 className='uppercase tracking-widest text-xs text-center text-blue-100'>
+                        <TextLoop words={focusAreas} className='h-5 min-w-64' />
                     </h2>
                     <TextGenerateEffect
                         className='text-center text-[40px] md:text-5xl lg:text-6xl'
                         words={words}
                     />
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-large lg:text-2xl text-blue-100'>
-                        Hi, I&apos;m Laith , a passionate Web Developer based in Italy
+                        Hi, I&apos;m Laith, a Senior Software Engineer / AI Engineer based in Italy
                     </p>
                     <a href="#projects">
                         <MagicButton title='Show My Work' icon={<FaLocationArrow/>} position='right' />

@@ -1,7 +1,7 @@
 "use client"
 
 import { projects } from '../data'
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useMemo } from 'react'
 import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
 import ProjectSlideOver from './ProjectSlideOver'
@@ -23,7 +23,24 @@ interface Project {
     link: string;
 }
 
+type Filter = 'all' | 'ai' | 'fullstack' | 'frontend'
+
+const filters: { key: Filter; label: string }[] = [
+    { key: 'all', label: 'All' },
+    { key: 'ai', label: 'AI & Agents' },
+    { key: 'fullstack', label: 'Full-stack' },
+    { key: 'frontend', label: 'Frontend' },
+]
+
+const categoryOf = (item: (typeof projects)[number]): Filter =>
+    item.ai ? 'ai' : item.type ? 'fullstack' : 'frontend'
+
+// Cards shown before "Show all"
+const INITIAL_COUNT = 6
+
 const RecentProjects: React.FC = () => {
+    const [filter, setFilter] = useState<Filter>('all')
+    const [expanded, setExpanded] = useState<boolean>(false)
     const [slider, setSlider] = useState<boolean>(false)
     const [projectUD, setProjectUD] = useState<boolean>(false)
     const [project, setProject] = useState<Project | null>(null)
@@ -32,6 +49,13 @@ const RecentProjects: React.FC = () => {
         setSlider(true);
         setProject(item);
     }, []);
+
+    const filtered = useMemo(
+        () => (filter === 'all' ? projects : projects.filter((item) => categoryOf(item) === filter)),
+        [filter]
+    )
+    const visible = expanded ? filtered : filtered.slice(0, INITIAL_COUNT)
+
     return (
         <div className='py-20' id='projects'>
             <h1 className='heading text-neutral-200'>
@@ -40,8 +64,21 @@ const RecentProjects: React.FC = () => {
             </h1>
             <ProjectSlideOver open={slider} setOpen={setSlider} project={project} setUDModal={setProjectUD} />
             <UnderDevelopmentModal open={projectUD} setOpen={setProjectUD} project={project} />
-            <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10 text-gray-100 '>
-                {projects.map((item) => {
+            <div className='flex flex-wrap items-center justify-center gap-2 mt-10'>
+                {filters.map(({ key, label }) => (
+                    <button
+                        key={key}
+                        type='button'
+                        onClick={() => { setFilter(key); setExpanded(false) }}
+                        aria-pressed={filter === key}
+                        className={`rounded-full border px-4 py-1.5 text-sm transition-colors duration-200 ${filter === key ? 'border-purple bg-purple/10 text-purple' : 'border-white/10 text-[#BEC1DD] hover:border-white/30 hover:text-white'}`}
+                    >
+                        {label}
+                    </button>
+                ))}
+            </div>
+            <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-6 text-gray-100 '>
+                {visible.map((item) => {
                     const framed = item.id === 2
                     return (
                     <div
@@ -51,12 +88,6 @@ const RecentProjects: React.FC = () => {
                     >
                         <PinContainer title="Project Details" href="https://twitter.com/mannupaaji">
                             <div className={`relative flex items-center justify-center sm:w-96 xl:w-80 w-[80vw] overflow-hidden h-[20vh] mb-10 ${item.featured ? 'rounded-md lg:rounded-3xl ring-1 ring-emerald-400/40 shadow-[0_0_40px_-8px_rgba(52,211,153,0.55)]' : ''}`}>
-                                {item.featured && (
-                                    <span className="absolute top-3 left-3 z-20 inline-flex items-center gap-1.5 rounded-full bg-black/70 backdrop-blur px-3 py-1 text-xs font-semibold tracking-wide text-emerald-300 ring-1 ring-inset ring-emerald-400/40">
-                                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                        My Product
-                                    </span>
-                                )}
                                 <div
                                     className={`relative w-full h-full overflow-hidden rounded-md lg:rounded-3xl ${framed ? 'bg-[#13162D]' : ''}`}
                                 >
@@ -80,9 +111,16 @@ const RecentProjects: React.FC = () => {
                             </div>
 
 
-                            <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                                {item.title}
-                            </h1>
+                            <div className="relative">
+                                {item.featured && (
+                                    <span className="absolute -top-6 left-0 whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.22em] text-emerald-300/90">
+                                        Founded &amp; built by me
+                                    </span>
+                                )}
+                                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                                    {item.title}
+                                </h1>
+                            </div>
 
                             <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-[#BEC1DD] mt-2 mb-4">
                                 {item.des}
@@ -115,6 +153,17 @@ const RecentProjects: React.FC = () => {
                     )
                 })}
             </div>
+            {filtered.length > INITIAL_COUNT && (
+                <div className='flex justify-center mt-4'>
+                    <button
+                        type='button'
+                        onClick={() => setExpanded((v) => !v)}
+                        className='rounded-full border border-white/10 px-6 py-2.5 text-sm text-neutral-200 transition-colors duration-200 hover:border-purple hover:text-purple'
+                    >
+                        {expanded ? 'Show fewer' : `Show all ${filtered.length} projects`}
+                    </button>
+                </div>
+            )}
 
         </div>
     )

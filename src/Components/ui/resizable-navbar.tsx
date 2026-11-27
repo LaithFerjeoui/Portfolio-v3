@@ -99,6 +99,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         stiffness: 200,
         damping: 50,
       }}
+      // wide enough for all seven links when the bar shrinks on scroll
+      style={{ minWidth: "760px" }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-4xl flex-row items-center justify-center self-start rounded-full bg-transparent px-4 py-7 lg:flex",
         visible && "bg-neutral-950/60",
